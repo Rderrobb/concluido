@@ -11,10 +11,21 @@ if ($Pessoa == "PessoaAdministrativo"){
 
     $Nome = $_POST['Nome'];
     $Identificacao = $_POST['Identificacao'];
+    $Setor = $_POST['Setor'];
+    $Bloco = $_POST['Bloco'];
+
+    $Pessoa1 = new PessoaAdministrativo($Nome, $Identificacao, $Setor, $Bloco );
+
+    echo $Pessoa1=VerPessoa();
+
+    echo "Ola $Nome, aqui estao algumas informações suas:
+        Seu numero de Identificação e: $Identificacao
+        Seu setor e: $Setor
+        Seu bloco e o: $Bloco    
+        ";
     
+    /*$Pesssoa1 = new PessoaAdministrativo($Nome, $Identificacao, $Setor, $Bloco);
 
-
-    $Pesssoa1 = new PessoaAdministrativo($Nome, $Identificacao);
     echo "<link rel='stylesheet' href='style.css'>";
     echo "<h2>Seja bem vindo a area Administrativa $Nome!</h2>";
     echo $Pesssoa1->VerPessoa();
@@ -24,13 +35,14 @@ if ($Pessoa == "PessoaAdministrativo"){
       <title>Formulário</title>
     </head>
     <body>
-    <form action='exibir2.php' method='POST'>
-        <p>Qual o seu setor: <input type='text' name='Setor'></p>
-        <p>Em qual bloco voce esta situado: <input type='text' name='Bloco'></p>
+    <form action='exibir.php' method='POST'>
+        <p>Setor: <input type='text' name='Setor' value='Bloco' ></p>
+        <p>Bloco: <input type='text' name='Bloco' value='Bloco' ></p>
         <p><input type='submit' value='prosseguir'></p>
     </form>
     </body>
-    </html></p>";
+    </html></p>";*/
+
 }
 
 elseif ($Pessoa == "PessoaDocente"){
@@ -39,8 +51,8 @@ elseif ($Pessoa == "PessoaDocente"){
     $Nome = $_POST['Nome'];
     $Identificacao = $_POST['Identificacao'];
 
-    $Pessoa1 = new PessoaDocente($Nome, $Identificacao);
-    echo "<link rel='stylesheet' href='style.css'>";
+    $Pessoa1 = new PessoaDocente($Nome, $Identificacao, $Bloco, $Disciplina);
+    /*echo "<link rel='stylesheet' href='style.css'>";
     echo "<h2>Seja bem vindo a area do Profrssor $Nome!</h2>";
     echo $Pessoa1->VerPessoa();
     echo "<p><!DOCTYPE html>
@@ -55,7 +67,7 @@ elseif ($Pessoa == "PessoaDocente"){
         <p><input type='submit' value='prosseguir'></p>
     </form>
     </body>
-    </html></p>";
+    </html></p>";*/
 }
 else {
      require_once("PessoaDiscente.class.php");
@@ -63,9 +75,9 @@ else {
     $Nome = $_POST['Nome'];
     $Identificacao = $_POST['Identificacao'];
 
-    $Pessoa1 = new PessoaDiscente($Nome, $Identificacao);
+    $Pessoa1 = new PessoaDiscente($Nome, $Identificacao,  $Turno, $Curso);
     
-    echo "<link rel='stylesheet' href='style.css'>";
+    /*echo "<link rel='stylesheet' href='style.css'>";
     echo "<h2>Seja bem vindo a area do Aluno $Nome!</h2>";
     echo $Pessoa1->VerPessoa();
     echo "<html>
@@ -80,12 +92,9 @@ else {
         
     </form>
     </body>
-    </html></p>";
+    </html></p>";*/
     
 
 }
 
 ?>
-
-
-
