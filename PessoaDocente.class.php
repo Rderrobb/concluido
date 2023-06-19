@@ -13,19 +13,10 @@ function __construct($Nome, $Identificacao, $Bloco, $Disciplina){
     $this->Disciplina=$Disciplina;
 }
 
-function Bloco(){
-    return $this->Bloco;
-}
-function Disciplina(){
-    return $this->Disciplina;
-}
-
 
 function VerPessoa(){
 parent::VerPessoa();
 
-    echo "<b>Nome: </b>{$this->Nome}";
-    echo "<b>Identificacao: </b>{$this->Identificacao}";
     echo "<b>Bloco: </b>{$this->Bloco}";
     echo "<b>Disciplina: </b>{$this->Disciplina}";
 

@@ -13,20 +13,12 @@ function __construct($Nome, $Identificacao, $Turno, $Curso){
     $this->Curso=$Curso;
 
 }
-function Turno(){
-    return $this->Turno;
-}
-function Curso(){
-    return $this->Curso;
-}
 
 function VerPessoa(){
 parent::VerPessoa();
 
-    echo "<b>Nome: </b>{$this->Nome}";
-    echo "<b>MIdentificação: </b>{$this->Identificacao}";
     echo "<b>Turno: </b>{$this->Turno}";
-    echo "<b>Curso: </b>$this->Curso";
+    echo "<b>Curso: </b>{$this->Curso}";
 
     
 
