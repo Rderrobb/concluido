@@ -1,100 +1,76 @@
-
-
+<link rel="stylesheet" href="style.css">
 <?php
 
 
 $Pessoa = $_POST['Pessoa'];
 
-if ($Pessoa == "PessoaAdministrativo"){
-    require_once("PessoaAdministrativo.class.php");
-
-
-    $Nome = $_POST['Nome'];
-    $Identificacao = $_POST['Identificacao'];
-    $Setor = $_POST['Setor'];
-    $Bloco = $_POST['Bloco'];
-
-    $Pessoa1 = new PessoaAdministrativo($Nome, $Identificacao, $Setor, $Bloco );
-
-    echo $Pessoa1=VerPessoa();
-
-    echo "Ola $Nome, aqui estao algumas informações suas:
-        Seu numero de Identificação e: $Identificacao
-        Seu setor e: $Setor
-        Seu bloco e o: $Bloco    
-        ";
+if  ($Pessoa == "PessoaAdministrativo"){
+   
     
-    /*$Pesssoa1 = new PessoaAdministrativo($Nome, $Identificacao, $Setor, $Bloco);
+    echo "<h2>Seja bem vindo a area Administrativa!</h2>";
+    echo "<html>";
+    echo "<head>";
+    echo "<title>exibir2</title>";
+    echo "</head>";
+    echo "<body>";
+    echo "<form action='exibir2.php'>";
+    echo "<label>Nome: </label><input type='text' name='Nome' >";
+    echo "<label>Identificacao: </label><input type='text' name='Identificacao' >";
+    echo "<label>Setor: </label><input type='text' name='Setor' value=''>";
+    echo "<label>Bloco: </label><input type='text' name='Bloco' value=''>";
+    echo "<input type='submit' value='enviar'>";
+    echo "<input type='hidden' name='Pessoa' value='PessoaAdministrativo'>";
+    echo "</form>";
+    
 
-    echo "<link rel='stylesheet' href='style.css'>";
-    echo "<h2>Seja bem vindo a area Administrativa $Nome!</h2>";
-    echo $Pesssoa1->VerPessoa();
-    echo "<p><!DOCTYPE html>
-    <html>
-    <head>
-      <title>Formulário</title>
-    </head>
-    <body>
-    <form action='exibir.php' method='POST'>
-        <p>Setor: <input type='text' name='Setor' value='Bloco' ></p>
-        <p>Bloco: <input type='text' name='Bloco' value='Bloco' ></p>
-        <p><input type='submit' value='prosseguir'></p>
-    </form>
-    </body>
-    </html></p>";*/
+   
 
 }
 
 elseif ($Pessoa == "PessoaDocente"){
-    require_once("PessoaDocente.class.php");
+ 
+    
+    echo "<h2>Seja bem vindo a area do professor!</h2>";
+    echo "<html>";
+    echo "<head>";
+    echo "<title>exibir2</title>";
+    echo "</head>";
+    echo "<body>";
+    echo "<form action='exibir2.php'>";
+    echo "<label>Nome: </label><input type='text' name='Nome'>";
+    echo "<label>Identificacao: </label><input type='text' name='Identificacao'>";
+    echo "<label>Bloco: </label><input type='text' name='Bloco' value=''>";
+    echo "<label>Disciplina: </label><input type='text' name='Disciplina' value=''>";
+    echo "<input type='submit' value='enviar'>";
+    echo "<input type='hidden' name='Pessoa' value='PessoaDocente'>";
+    echo "</form>";
 
-    $Nome = $_POST['Nome'];
-    $Identificacao = $_POST['Identificacao'];
-
-    $Pessoa1 = new PessoaDocente($Nome, $Identificacao, $Bloco, $Disciplina);
-    /*echo "<link rel='stylesheet' href='style.css'>";
-    echo "<h2>Seja bem vindo a area do Profrssor $Nome!</h2>";
-    echo $Pessoa1->VerPessoa();
-    echo "<p><!DOCTYPE html>
-    <html>
-    <head>
-      <title>Formulário</title>
-    </head>
-    <body>
-    <form action='exibir2.php' method='POST'>
-        <p>Qual a sua disciplina: <input type='text' name='Disciplina'></p>
-        <p>Qual bloco voce atua: <input type='text' name='Bloco'></p>
-        <p><input type='submit' value='prosseguir'></p>
-    </form>
-    </body>
-    </html></p>";*/
 }
+
 else {
-     require_once("PessoaDiscente.class.php");
-
-    $Nome = $_POST['Nome'];
-    $Identificacao = $_POST['Identificacao'];
-
-    $Pessoa1 = new PessoaDiscente($Nome, $Identificacao,  $Turno, $Curso);
     
-    /*echo "<link rel='stylesheet' href='style.css'>";
-    echo "<h2>Seja bem vindo a area do Aluno $Nome!</h2>";
-    echo $Pessoa1->VerPessoa();
-    echo "<html>
-    <head>
-    </head>
-    <body>
-    <form action='' method='POST'>
-        <p>Qual o seu curso: <input type='text' name='Curso'></p>
-        <p>Qual Periodo: <input type='text' name='Periodo'></p>
-
-        <p><input type='submit' value='prosseguir'></p>
-        
-    </form>
-    </body>
-    </html></p>";*/
     
+    echo "<h2>Seja bem vindo a area do Aluno!</h2>";
+    echo "<html>";
+    echo "<head>";
+    echo "<title>exibir</title>";
+    echo "</head>";
+    echo "<body>";
+    echo "<form action='exibir2.php'>";
+    echo "<label>Nome: </label><input type='text' name='Nome'>";
+    echo "<label>Identificacao: </label><input type='text' name='Identificacao' >";
+    echo "<label>Turno: </label><input type='text' name='Turno' value=''>";
+    echo "<label>Curso: </label><input type='text' name='Curso' value=''>";
+    echo "<input type='submit' value='enviar'>";
+    echo "<input type='hidden' name='Pessoa' value='PessoaDiscente'>";
+    echo "</form>";
 
+    
+  
+    
 }
+
+
+?>
 
 ?>
