@@ -5,10 +5,11 @@ class PessoaAdministrativo extends Pessoa{
 
     public $Setor;
     public $Bloco;
+    
 
 
 
-function __construct($Nome, $Identificacao, $Setor, $Bloco){
+function __construct($Nome, $Identificacao, $Bloco, $Setor){
     parent::__construct($Nome, $Identificacao);
 
     $this->Setor=$Setor;
