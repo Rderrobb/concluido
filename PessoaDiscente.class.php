@@ -11,7 +11,6 @@ function __construct($Nome, $Identificacao, $Turno, $Curso){
 
     $this->Turno=$Turno;
     $this->Curso=$Curso;
-
 }
 
 function VerPessoa(){
