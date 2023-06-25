@@ -6,8 +6,8 @@ class PessoaDiscente extends Pessoa{
     public $Turno;
     public $Curso;
 
-function __construct($Nome, $Identificacao, $Turno, $Curso){
-    parent::__construct($Nome, $Identificacao);
+function __construct($Nome, $Identificacao, $Sexo, $Turno, $Curso){
+    parent::__construct($Nome, $Identificacao, $Sexo);
 
     $this->Turno=$Turno;
     $this->Curso=$Curso;
