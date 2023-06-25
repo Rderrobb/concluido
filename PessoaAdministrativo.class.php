@@ -5,16 +5,12 @@ class PessoaAdministrativo extends Pessoa{
     public $Setor;
     public $Bloco;
     
-
-
-
 function __construct($Nome, $Identificacao, $Bloco, $Setor){
-    parent::__construct($Nome, $Identificacao);
-
+    parent::__construct($Nome, $Identificacao, $Sexo);
+    
     $this->Setor=$Setor;
     $this->Bloco=$Bloco;
-   
-    
+
 }
 
 function VerPessoa(){
@@ -30,3 +26,4 @@ parent::VerPessoa();
 
 
 ?>
+
