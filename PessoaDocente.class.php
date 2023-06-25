@@ -6,8 +6,8 @@ class PessoaDocente extends Pessoa{
     public $Bloco;
     public $Disciplina;
 
-function __construct($Nome, $Identificacao, $Bloco, $Disciplina){
-    parent::__construct($Nome, $Identificacao);
+function __construct($Nome, $Identificacao, $Sexo, $Bloco, $Disciplina){
+    parent::__construct($Nome, $Identificacao, $Sexo);
 
     $this->Bloco=$Bloco;
     $this->Disciplina=$Disciplina;
