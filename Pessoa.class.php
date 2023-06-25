@@ -6,7 +6,7 @@ class Pessoa{
     public $Identificacao;
     public $Sexo;
 
-    function __construct($Nome, $Identificacao){
+    function __construct($Nome, $Identificacao, $Sexo){
         $this->Nome = $Nome;
         $this->Identificacao = $Identificacao;
         $this->Sexo = $Sexo;
