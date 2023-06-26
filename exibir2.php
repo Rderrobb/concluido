@@ -16,6 +16,8 @@ if ($Pessoa == "PessoaAdministrativo"){
     
     $Pessoa1 = new PessoaAdministrativo($Nome, $Identificacao, $Sexo, $Bloco, $Setor );
 
+    echo $Pessoa1->VerPessoa();
+
 }
 
 elseif ($Pessoa == "PessoaDocente"){
