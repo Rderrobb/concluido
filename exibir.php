@@ -4,6 +4,7 @@
 
 $Pessoa = $_POST['Pessoa'];
 
+
 if  ($Pessoa == "PessoaAdministrativo"){
 
  
@@ -18,6 +19,12 @@ if  ($Pessoa == "PessoaAdministrativo"){
     echo "<label>Identificacao: </label><input type='text' name='Identificacao'>";
     echo "<label>Setor: </label><input type='text' name='Setor'>";
     echo "<label>Bloco: </label><input type='text' name='Bloco'>";
+    echo "<label>Selecione seu Sexo:</label>";
+    echo "<select name='Sexo'>"; 
+    echo "<option name='Sexo' value='Masculino'>Masculino</option>";
+    echo "<option name='Sexo' value='Feminino'>Feminino</option>";
+    echo "<option name='Sexo' value='Nao especificar'>Não especificar</option>";
+    echo "</select>";
     echo "<input type='hidden' name='Pessoa' value='PessoaAdministrativo'>";
     echo "<input type='submit' value='enviar'>";
     echo "</form>";
@@ -43,6 +50,12 @@ elseif ($Pessoa == "PessoaDocente"){
     echo "<label>Identificacao: </label><input type='text' name='Identificacao'>";
     echo "<label>Bloco: </label><input type='text' name='Bloco' value=''>";
     echo "<label>Disciplina: </label><input type='text' name='Disciplina' value=''>";
+    echo "<label>Selecione seu Sexo:</label>";
+    echo "<select name='Sexo'>"; 
+    echo "<option name='Sexo' value='Masculino'>Masculino</option>";
+    echo "<option name='Sexo' value='Feminino'>Feminino</option>";
+    echo "<option name='Sexo' value='Nao especificar'>Não especificar</option>";
+    echo "</select>";
     echo "<input type='submit' value='enviar'>";
     echo "<input type='hidden' name='Pessoa' value='PessoaDocente'>";
     echo "</form>";
@@ -64,6 +77,12 @@ else {
     echo "<label>Identificacao: </label><input type='text' name='Identificacao' >";
     echo "<label>Turno: </label><input type='text' name='Turno' value=''>";
     echo "<label>Curso: </label><input type='text' name='Curso' value=''>";
+    echo "<label>Selecione seu Sexo:</label>";
+    echo "<select name='Sexo'>"; 
+    echo "<option name='Sexo' value='Masculino'>Masculino</option>";
+    echo "<option name='Sexo' value='Feminino'>Feminino</option>";
+    echo "<option name='Sexo' value='Nao especificar'>Não especificar</option>";
+    echo "</select>";
     echo "<input type='submit' value='enviar'>";
     echo "<input type='hidden' name='Pessoa' value='PessoaDiscente'>";
     echo "</form>";
@@ -76,6 +95,8 @@ else {
 
 
 ?>
+
+
 
 
 
