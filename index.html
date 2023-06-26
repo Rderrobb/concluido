@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Escolha" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,15 +22,21 @@
             <br><br>
             <label><input type="radio" name="Pessoa" value="PessoaDiscente"> Aluno</label>
             <br><br>
+
+            <label for="Sexo">Selecione seu Sexo:</label>
+            <select name="Sexo">
+                <option name="Sexo">Masculino</option>
+                <option name="sexo">Feminino</option>
+                <option name="Sexo" value="Nao mostrar">Não especificar</option>
+            </select>
+
+            <label><input type="checkbox" required="Yes">Nao sou um robô</label>
     </div>
-    
+
     <div>
         <input type="submit" value="Prosseguir">
-    </div>
 
-    </form>
-
-
+        </form>
 </body>
 
 </html>
